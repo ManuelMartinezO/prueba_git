@@ -52,6 +52,13 @@ public class UsuarioService {
         return nuevo;
     }
 
+    public UsuariosDTO editarAlgo(Long id, UsuariosDTO nuevo) {
+        UsuariosDTO usuario = obtenerUsuario(id);
+        usuario.setNombre(nuevo.getNombre());
+        usuario.setId(nuevo.getId());
+        return nuevo;
+    }
+
     public UsuariosDTO eliminar(Long id) {
         UsuariosDTO usuario = obtenerUsuario(id);
         listaUsaurios.remove(usuario);
